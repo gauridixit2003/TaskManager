@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... your meta tags and links ... -->
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>TASK MANAGER</title>
+
+	<link rel="stylesheet" href="style.css" />
+	
+    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+			
+            <div class="greeting">
+				<div id="date"></div>
+                <h2 class="title" style="color: rgb(255, 255, 255); margin-bottom: 1rem; margin-left: 1rem;">
+                    Hello, <input type="text" id="name" placeholder="Name here" style="color: rgb(255, 255, 255);;"/>
+                </h2>
+            </div>
+        </header>
+
+        <main class="app">
+            <section class="create-todo">
+				<h3>ADD A TASK</h3>
+				<form id="new-todo-form">
+
+					<div class="adjust">
+					
+						<h4>What's on your todo?</h4>
+						<input 
+							type="text" 
+							placeholder="e.g. Go gym"
+							name="content"
+							id="content" />
+							<h4>Deadline :</h4>
+						<div class="upper">
+							<div class="date-due"> 
+								
+								<label>
+									<input type="datetime-local" id="dueDate" name="dueDate">
+									
+								</label>
+								
+							</div> 
+						</div>
+						
+						
+						
+						<h4 style="margin-top: 1.5rem;">Pick a category</h4>
+						<div class="options">
+							<label>
+								<input type="radio" name="category" id="category1" value="business" /> 
+								<span class="bubble business"></span>
+								<div>Professional</div>
+							</label>
+							<label>
+								<input type="radio" name="category" id="category2" value="personal" />
+								<span class="bubble personal"></span>
+								<div>Personal</div>
+							</label>
+						</div>
+
+					
+					
+					</div>
+					<div class="adjust2">
+						<input type="submit" value="+" />
+					</div>
+					
+					
+				</form>
+			</section>
+		
+			<section class="todo-list">
+				<h3 style="font-size: rem;">TASKS</h3>
+
+					<div class="box">
+						<div class="container-2"><span class="icon"><i class="fa fa-search"></i></span>
+						<input id="search-input" type="text"  />
+						</div>
+						<div class="sort-dropdown">
+							<button id="sort-button" style="color: rgb(142, 154, 150);">Sort</button>
+							<div class="sort-options" id="sort-options">
+								<a href="#" data-sortby="dueDate" style="font-size: 1.25rem;">Deadline</a>
+								<a href="#" data-sortby="category" style="font-size: 1.25rem;">Category</a>
+								
+							</div>
+						</div>
+						
+				    </div>
+				<div class="list" id="todo-list"></div>
+			</section>
+ </main>
+    </div>
+
+    
+	<script src="script.js"></script>
+</body>
+</html>
